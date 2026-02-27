@@ -14,8 +14,5 @@ COPY shiny-server.conf /etc/shiny-server/shiny-server.conf
 # Instalar paquetes R necesarios
 RUN R -e "install.packages(c('shiny', 'shinydashboard', 'DT', 'ggplot2', 'plotly', 'vcd', 'reshape2'), repos='http://cran.rstudio.com/')"
 
-# Exponer puerto
-EXPOSE 3838
-
 # Comando por defecto
 CMD ["/usr/bin/shiny-server.sh"]

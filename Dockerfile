@@ -8,6 +8,9 @@ RUN apt-get update && apt-get install -y \
 # Copiar la app
 COPY app.R /srv/shiny-server/
 
+# Copiar configuración de Shiny Server
+COPY shiny-server.conf /etc/shiny-server/shiny-server.conf
+
 # Instalar paquetes R necesarios
 RUN R -e "install.packages(c('shiny', 'shinydashboard', 'DT', 'ggplot2', 'plotly', 'vcd', 'reshape2'), repos='http://cran.rstudio.com/')"
 

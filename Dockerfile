@@ -12,8 +12,8 @@ RUN R -e "install.packages(c('shiny','shinydashboard','DT','ggplot2','plotly','v
 WORKDIR /app
 COPY app.R /app/
 
-# Exponer puerto (Render lo asigna dinámicamente)
+# Exponer puerto
 EXPOSE 3838
 
-# Ejecutar app directamente (NO shiny-server)
+# Ejecutar app
 CMD R -e "shiny::runApp('/app', host='0.0.0.0', port=as.numeric(Sys.getenv('PORT')))"

@@ -2,6 +2,10 @@ FROM rocker/shiny:4.3.2
 
 # Instalar dependencias del sistema necesarias
 RUN apt-get update && apt-get install -y \
+build-essential \
+    gfortran \
+    g++ \
+    cmake \
     libcurl4-openssl-dev \
     libssl-dev \
     libxml2-dev \

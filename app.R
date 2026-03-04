@@ -74,19 +74,37 @@ ui <- dashboardPage(
   dashboardBody(
     tabItems(
       
-      tabItem(tabName="inicio",
+ tabItem(tabName="inicio",
               fluidRow(
                 box(width=12, status="primary", solidHeader=TRUE,
                     title="Presentación",
                     
                     h4("Movilidad Ocupacional Intergeneracional - Uruguay"),
-                    h4("Mag. José González "),
+                    h4("Mag. José González"),
                     p("Fuente: Encuesta Longitudinal de Protección Social (ELPS)."),
                     p("Clasificación ocupacional basada en ISCO-88."),
                     
                     p("Clasificación armonizada con criterios de la OIT y el INE Uruguay.")
-                )
-              )
+  
+                    
+                )),
+                tags$a(
+                  href = "https://www.colibri.udelar.edu.uy/jspui/handle/20.500.12008/35286",
+                  target = "_blank",
+                  class = "btn",
+                  style = "
+    background-color:#CB181D;
+    color:white;
+    border:none;
+    font-weight:bold;
+    padding:10px 18px;
+    font-size:16px;
+  ",
+                  icon("external-link-alt"),
+                  " Ver Investigación Académica"
+                ),
+                br(),br(),
+              
       ),
       
       ########################################################
@@ -105,6 +123,22 @@ ui <- dashboardPage(
                                  icon = icon("book"))
                 )
               ),
+                           tags$a(
+                href = "https://www.colibri.udelar.edu.uy/jspui/handle/20.500.12008/35286",
+                target = "_blank",
+                class = "btn",
+                style = "
+    background-color:#CB181D;
+    color:white;
+    border:none;
+    font-weight:bold;
+    padding:10px 18px;
+    font-size:16px;
+  ",
+                icon("external-link-alt"),
+                " Ver Investigación Académica"
+              ),
+              br(),br(),
               
               fluidRow(
                 conditionalPanel(
